@@ -3,6 +3,9 @@
     class="mx-3 my-6 rounded-lg px-4 py-4 text-pink-200 bg-local bg-cover transform hover:-translate-y-2 transition ease-out duration-200 hover:shadow-2xl float max-w-md"
     :style="{ 'background-image': `url(${require('@/assets/img/bg.jpg')})` }"
   >
+    <div class="right-0">
+      <button @click="enLang = !enLang">Switch language</button>
+    </div>
     <div v-if="en.length < 130">
       <span v-if="enLang" class="text-2xl">"{{ en }}"</span>
       <span v-else class="text-2xl">"{{ jp }}"</span>
