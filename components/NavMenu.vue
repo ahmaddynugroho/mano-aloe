@@ -1,49 +1,67 @@
 <template>
-  <div
-    v-show="toggleMenu"
-    class="fixed bottom-0 right-0"
-    @mouseleave="showlangmenu = false"
-  >
-    <nuxt-link to="/">
+  <div>
+    <div
+      class="fixed bottom-0 right-0"
+      v-on:click="openMenu"
+      @mouseover="openMenu"
+      @mouseleave="closeMenu"
+    >
       <button
         class="transition duration-150 ease-out hover:scale-105 transform hover:-translate-y-1 bg-pink-200 shadow hover:shadow-xl active:bg-red-500 text-pink-900 rounded-full px-4 py-1 mx-4 mb-2"
       >
-        Home
+        MENU ICON
       </button>
-    </nuxt-link>
-    <br />
-    <nuxt-link to="/about">
-      <button
-        class="transition duration-150 ease-out hover:scale-105 transform hover:-translate-y-1 bg-pink-200 shadow hover:shadow-xl active:bg-red-500 text-pink-900 rounded-full px-4 py-1 mx-4 mb-2"
-      >
-        About
-      </button>
-    </nuxt-link>
-    <br />
-    <nuxt-link to="/latest">
-      <button
-        class="transition duration-150 ease-out hover:scale-105 transform hover:-translate-y-1 bg-pink-200 shadow hover:shadow-xl active:bg-red-500 text-pink-900 rounded-full px-4 py-1 mx-4 mb-2"
-      >
-        Latest👅Posts
-      </button>
-    </nuxt-link>
+      <div class="fixed second-bottom right-0" v-if="open">
+        <nuxt-link to="/">
+          <button
+            class="transition duration-150 ease-out hover:scale-105 transform hover:-translate-y-1 bg-pink-200 shadow hover:shadow-xl active:bg-red-500 text-pink-900 rounded-full px-4 py-1 mx-4 mb-2"
+          >
+            Home
+          </button>
+        </nuxt-link>
+        <br />
+        <nuxt-link to="/about">
+          <button
+            class="transition duration-150 ease-out hover:scale-105 transform hover:-translate-y-1 bg-pink-200 shadow hover:shadow-xl active:bg-red-500 text-pink-900 rounded-full px-4 py-1 mx-4 mb-2"
+          >
+            About
+          </button>
+        </nuxt-link>
+        <br />
+        <nuxt-link to="/latest">
+          <button
+            class="transition duration-150 ease-out hover:scale-105 transform hover:-translate-y-1 bg-pink-200 shadow hover:shadow-xl active:bg-red-500 text-pink-900 rounded-full px-4 py-1 mx-4 mb-2"
+          >
+            Latest👅Posts
+          </button>
+        </nuxt-link>
+      </div>
+    </div>
   </div>
 </template>
 
+<!-- Could not use one toggleMenu function because both mouseclick & mousehover toggle, so first click would mess up order -->
 <script>
 export default {
   data: () => ({
     open: true,
   }),
   methods: {
-    toggleMenu() {
+    openMenu() {
+      this.open = true
       console.log(this.open)
-      this.open = !this.open
+    },
+    closeMenu() {
+      this.open = false
+      console.log(this.open)
     },
   },
 }
 </script>
 <style>
+.second-bottom {
+  bottom: 3vw;
+}
 /*  */
 .menu-enter-active,
 .menu-leave-active {
