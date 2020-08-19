@@ -23,7 +23,7 @@
 
 <script>
 export default {
-  props: ['author', 'en', 'jp'],
+  props: ['author', 'native', 'en', 'jp'],
   data() {
     return {
       enLang: true,
