@@ -34,7 +34,7 @@ export default {
     return {
       messages: [
         {
-          author: 'Y E S man',
+          author: 'Y E S man ',
           en:
             'Tempor consequat dolor ex est amet tempor do incididunt dolor aliqua fugiat. Pariatur cupidatat tempor anim veniam duis labore mollit. Ex cupidatat anim nisi ipsum magna amet anim laboris amet ipsum ad irure id.',
           jp: 'ペコです',
