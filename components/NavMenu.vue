@@ -9,7 +9,7 @@
       <button
         class="transition duration-150 ease-out hover:scale-105 transform hover:-translate-y-1 bg-pink-200 shadow hover:shadow-xl active:bg-red-500 text-pink-900 rounded-full px-4 py-1 mx-4 mb-2"
       >
-        <img src="/1200px-Hamburger_icon.svg.jpg" class="img-icon" />
+        <img src="/TRANSPARENT_Hamburger_icon.png" class="img-icon" />
       </button>
       <div class="fixed second-bottom right-0" v-if="open">
         <nuxt-link to="/">
@@ -24,7 +24,7 @@
           <button
             class="transition duration-150 ease-out hover:scale-105 transform hover:-translate-y-1 bg-pink-200 shadow hover:shadow-xl active:bg-red-500 text-pink-900 rounded-full px-4 py-1 mx-4 mb-2"
           >
-            <img src="/about_icon.jpg" class="img-icon" />
+            <img src="/about_icon.png" class="img-icon" />
           </button>
         </nuxt-link>
         <br />
@@ -32,10 +32,7 @@
           <button
             class="transition duration-150 ease-out hover:scale-105 transform hover:-translate-y-1 bg-pink-200 shadow hover:shadow-xl active:bg-red-500 text-pink-900 rounded-full px-4 py-1 mx-4 mb-2"
           >
-            <img
-              src="/416-4164629_latest-announcement-latest-news-icon-latest-news-icon-png.png"
-              class="img-icon"
-            />
+            <img src="/TRANSPARENT_Latest_News_Icon.png" class="img-icon" />
           </button>
         </nuxt-link>
       </div>
