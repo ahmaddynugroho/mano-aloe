@@ -7,14 +7,14 @@
       <button @click="enLang = !enLang">
         <img
           src="/TRANSPARENT_220px-Font_Awesome_5_solid_language.svg.png"
-          class="flex-img-icon"
+          class="img-icon"
         />
       </button>
       <button @click="enLang = !enLang">
-        <img src="/1200px-Flag_of_Japan.svg.png" class="flex-img-icon" />
+        <img src="/1200px-Flag_of_Japan.svg.png" class="img-icon" />
       </button>
       <button @click="enLang = !enLang">
-        <img src="/united_kingdom_great_britain.png" class="flex-img-icon" />
+        <img src="/united_kingdom_great_britain.png" class="img-icon" />
       </button>
     </div>
     <br />
@@ -45,7 +45,7 @@ export default {
 </script>
 
 <style>
-.flex-img-icon {
+.img-icon {
   max-height: 3vw;
   max-width: 3vw;
 }
