@@ -1,5 +1,6 @@
 <template>
   <div class="antialiased relative text-center">
+    <ContactNavbar />
     <Landing />
     <Nuxt class="" />
     <NavMenu />
@@ -7,11 +8,13 @@
 </template>
 
 <script>
+import ContactNavbar from '@/components/ContactNavbar'
 import NavMenu from '@/components/NavMenu'
 import Landing from '@/components/Landing'
 export default {
   name: 'Layout',
   components: {
+    ContactNavbar,
     NavMenu,
     Landing,
   },
