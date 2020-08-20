@@ -4,10 +4,9 @@
       <div v-for="(msg, i) in messages" :key="i">
         <Card1
           v-if="i < messages.length / 2"
-          :author="msg.Name"
-          :native="msg.Native_message"
-          :en="msg.EN_message"
-          :jp="msg.JP_message_Deepl"
+          :author="msg.author"
+          :en="msg.en"
+          :jp="msg.jp"
         />
       </div>
     </div>
@@ -15,10 +14,9 @@
       <div v-for="(msg, i) in messages" :key="i">
         <Card1
           v-if="i >= messages.length / 2"
-          :author="msg.Name"
-          :native="msg.Native_message"
-          :en="msg.EN_message"
-          :jp="msg.JP_message_Deepl"
+          :author="msg.author"
+          :en="msg.en"
+          :jp="msg.jp"
         />
       </div>
     </div>
@@ -27,7 +25,6 @@
 
 <script>
 import Card1 from '@/components/cards/Card1'
-import json from '@/static/Aloe_Appreciation_Messages.json'
 
 export default {
   components: {
@@ -35,7 +32,14 @@ export default {
   },
   data() {
     return {
-      messages: json,
+      messages: [
+        {
+          author: 'Y E S man ',
+          en:
+            'Tempor consequat dolor ex est amet tempor do incididunt dolor aliqua fugiat. Pariatur cupidatat tempor anim veniam duis labore mollit. Ex cupidatat anim nisi ipsum magna amet anim laboris amet ipsum ad irure id.',
+          jp: 'ペコです',
+        },
+      ],
     }
   },
 }
